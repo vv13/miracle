@@ -28,7 +28,6 @@
     "type": "git",
     "url": "https://github.com/vv13/vue-authplugin"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.0.1",
