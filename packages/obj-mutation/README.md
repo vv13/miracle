@@ -96,6 +96,7 @@ const result = mutator.parse(data)
 - 参数：
   - {string} schema，表配置项，以下会详细说明
   - {string} options.clean，过滤掉Falsy的key，默认为true
+  - {string[]} options.omit，剔除对象的字段
   - {string} options.cleanValue, 过滤掉与cleanValue全等的key，默认会过滤掉所有Falsy
 
 由上可知，默认会过滤掉一切Falsy值：
@@ -123,3 +124,5 @@ console.log(result) // {test2: 0, test3: false}
 ```
 
 如果不使用过滤功能，只需要将options.clean设为false即可。
+
+omit的用法请参考lodash/omit。

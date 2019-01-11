@@ -18,6 +18,15 @@ test('clean cleanValue ', () => {
   expect(mutation.parse(data)).toEqual({ test1: undefined });
 });
 
+test('clean omit', () => {
+  const data = {
+    test: '123',
+    test1: '456',
+  };
+  const mutation = new Mutation({}, { omit: ['test1'] });
+  expect(mutation.parse(data)).toEqual({ test: '123' });
+});
+
 test('mutate', () => {
   const data = {
     test: 'haha',
