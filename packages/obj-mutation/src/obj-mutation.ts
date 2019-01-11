@@ -5,7 +5,7 @@
 export interface OptionsTypes {
   clean?: boolean;
   cleanValue?: any;
-  omit: string[];
+  omit?: string[];
   [key: string]: any;
 }
 
@@ -20,7 +20,7 @@ export interface SchemaTypes {
 const defaultOptions: OptionsTypes = {
   clean: true,
   cleanValue: '_falsy',
-  omit: []
+  omit: [],
 };
 
 class ObjMutation {
@@ -59,9 +59,9 @@ class ObjMutation {
       }
       newObj[originObjKey] = format ? format(originValue) : originValue;
     });
-    this.options.omit.forEach(key => {
-      delete newObj[key]
-    })
+    (this.options.omit as string[]).forEach((key) => {
+      delete newObj[key];
+    });
     return this.pipe(newObj);
   }
 
