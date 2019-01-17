@@ -1,25 +1,5 @@
 import ScrollReveal from 'scrollreveal'
 
-function generateOptions(defaultOptions, bindingValue, bindingModifiers) {
-  const options = Object.assign({}, defaultOptions, bindingValue);
-
-  if (bindingModifiers) {
-    if (bindingModifiers.reset) {
-      options.reset = true;
-    }
-
-    if (bindingModifiers.nomobile) {
-      options.mobile = false;
-    }
-
-    if (bindingModifiers.nodesktop) {
-      options.desktop = false;
-    }
-  }
-
-  return options;
-}
-
 const VueScrollReveal = {
   install(Vue, defaultOptions) {
     Vue.directive('scroll-reveal', {
@@ -44,15 +24,7 @@ const VueScrollReveal = {
 
     Object.defineProperty(Vue.prototype, '$sr', {
       get() {
-        const instance = ScrollReveal()
-        return Object.assign({}, instance, {
-          reveal: new Proxy(instance.reveal, {
-            apply: (target, ctx, args) => {
-              const [el, config, interval, sync] = args
-              target.apply(ctx, [el, generateOptions(defaultOptions, config), interval, sync])
-            }
-          })
-        })
+        return ScrollReveal()
       },
     });
   },
