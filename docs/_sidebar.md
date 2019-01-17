@@ -5,6 +5,7 @@
 - 插件
   - [vue-authplugin](/packages/vue-authplugin)
   - [vue-ravenplugin](/packages/vue-ravenplugin)
+  - [vue-scroll-reveal](/packages/vue-ravenplugin)
 - 工具集
   - [storage](/packages/storage)
   - [utils](/packages/utils)

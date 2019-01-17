@@ -5,6 +5,7 @@
 - `@what-a-faka/storage`，localStorage外挂
 - `@what-a-faka/obj-mutation`，将自己的对象进行劳动改造
 - `@what-a-faka/vue-ravenplugin`，Sentry监控
+- `@what-a-faka/vue-scroll-reveal`，scrollreveal插件
 
 ## 文档
 - 在线地址：[https://what-a-faka.github.io/miracle/](https://what-a-faka.github.io/miracle/#/)
