@@ -37,7 +37,6 @@ export default {
   },
   mounted() {
     this.$sr.reveal(document.querySelector('.hello'))
-    console.log(typeof this.$sr.clean)
   }
 }
 </script>
