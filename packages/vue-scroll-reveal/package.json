@@ -1,6 +1,6 @@
 {
   "name": "@what-a-faka/vue-scroll-reveal",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A Vue directive to wrap @jlmake's excellent ScrollReveal library.",
   "keywords": [
     "vue",
